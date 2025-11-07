@@ -7,13 +7,20 @@
   <meta name="description" content="Kontaktinformationen von DECKER-SERVICE DIENSTLEISTUNGEN" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="assets/img/favicon.png" />
+  <style>
+    .contact-main a:hover {
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
     <div class="brand">
-      <div class="logo-placeholder logo-primary">
-        <img src="assets/img/logo-primary.png" alt="DECKER-SERVICE Logo" class="logo" />
-      </div>
+      <a href="index.html" class="logo-link">
+        <div class="logo-placeholder logo-primary">
+          <img src="assets/img/logo-primary.png" alt="DECKER-SERVICE DIENSTLEISTUNGEN - Garten- und Landschaftspflege in Bad Kreuznach" class="logo" />
+        </div>
+      </a>
     </div>
     <nav class="nav">
       <a href="index.html">Start</a>
@@ -24,41 +31,33 @@
     </nav>
   </header>
 
-  <main class="container" style="padding: var(--spacing-xl) var(--spacing-md); max-width: 900px;">
-    <h1>Kontakt</h1>
+  <main class="container" style="padding: var(--spacing-lg) var(--spacing-md); max-width: 700px;">
+    <h1 style="margin-bottom: var(--spacing-md);">Kontakt</h1>
     
-    <section style="margin-bottom: var(--spacing-lg);">
-      <div style="background-color: white; padding: var(--spacing-lg); border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin-bottom: var(--spacing-md);">
-        <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">DECKER-SERVICE DIENSTLEISTUNGEN</h2>
+    <section style="margin-bottom: var(--spacing-md);">
+      <div style="background-color: white; padding: var(--spacing-md); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+        <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-sm); font-size: 1.2rem;">DECKER-SERVICE DIENSTLEISTUNGEN</h2>
         
-        <div style="margin-bottom: var(--spacing-md);">
-          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-xs);">Telefon</h3>
-          <p style="font-size: 1.2rem; margin: 0;">
-            <a href="tel:+491749025136" style="color: var(--color-accent); font-weight: 600;">0174 9025136</a>
-          </p>
-        </div>
-        
-        <div style="margin-bottom: var(--spacing-md);">
-          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-xs);">E-Mail</h3>
+        <div style="display: grid; grid-template-columns: auto 1fr; gap: var(--spacing-xs) var(--spacing-sm); margin-bottom: var(--spacing-sm); align-items: start;">
+          <strong style="color: var(--color-primary);">Telefon:</strong>
           <p style="margin: 0;">
-            <a href="mailto:info@decker-service.de" style="color: var(--color-accent);">info@decker-service.de</a>
+            <a href="tel:+491749025136" style="color: var(--color-accent); font-weight: 600; font-size: 1.1rem; display: inline-block; transition: var(--transition);">0174 9025136</a>
           </p>
-          <p style="margin: 0;">
-            <a href="mailto:support@deckerservice.de" style="color: var(--color-accent);">support@deckerservice.de</a>
+          
+          <strong style="color: var(--color-primary);">E-Mail:</strong>
+          <p style="margin: 0; line-height: 1.6;">
+            <a href="mailto:info@decker-service.de" style="color: var(--color-accent); display: inline-block; transition: var(--transition);">info@decker-service.de</a><br />
+            <a href="mailto:support@deckerservice.de" style="color: var(--color-accent); display: inline-block; transition: var(--transition);">support@deckerservice.de</a>
           </p>
-        </div>
-        
-        <div style="margin-bottom: var(--spacing-md);">
-          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-xs);">Betriebszeiten</h3>
-          <p style="margin: 0;">
-            <strong>Montag bis Freitag:</strong> 16:30–18:00 Uhr<br />
-            <strong>Samstag:</strong> 7:30–16:00 Uhr<br />
-            <strong>Sonntag:</strong> Geschlossen
+          
+          <strong style="color: var(--color-primary);">Betriebszeiten:</strong>
+          <p style="margin: 0; line-height: 1.6;">
+            Mo–Fr: 16:30–18:00 Uhr<br />
+            Sa: 7:30–16:00 Uhr<br />
+            So: Geschlossen
           </p>
-        </div>
-        
-        <div style="margin-bottom: var(--spacing-md);">
-          <h3 style="color: var(--color-primary); font-size: 1.1rem; margin-bottom: var(--spacing-xs);">Servicegebiet</h3>
+          
+          <strong style="color: var(--color-primary);">Servicegebiet:</strong>
           <p style="margin: 0;">
             Bad Kreuznach und Umgebung
           </p>
@@ -66,19 +65,7 @@
       </div>
     </section>
 
-    <section style="margin-bottom: var(--spacing-lg);">
-      <div style="background-color: var(--color-bg-light); padding: var(--spacing-lg); border-radius: var(--radius-lg);">
-        <h2 style="color: var(--color-primary); margin-bottom: var(--spacing-md);">So erreichen Sie uns</h2>
-        <p>
-          Wir sind gerne für Sie da! Kontaktieren Sie uns telefonisch während unserer Betriebszeiten oder senden Sie uns eine E-Mail. Wir melden uns schnellstmöglich bei Ihnen zurück.
-        </p>
-        <p>
-          Für dringende Anfragen können Sie uns auch außerhalb der Betriebszeiten eine E-Mail senden. Wir werden diese so schnell wie möglich bearbeiten.
-        </p>
-      </div>
-    </section>
-
-    <div style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); border-top: 2px solid var(--color-border);">
+    <div style="margin-top: var(--spacing-md); padding-top: var(--spacing-md); border-top: 2px solid var(--color-border);">
       <a href="index.html" class="btn btn-secondary">Zurück zur Startseite</a>
     </div>
   </main>
