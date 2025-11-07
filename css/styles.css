@@ -114,6 +114,14 @@ a:hover {
   padding: var(--spacing-sm) 0;
 }
 
+/* Header auf mobilen Geräten nicht sticky */
+@media (max-width: 1024px) {
+  .site-header {
+    position: relative;
+    top: auto;
+  }
+}
+
 .site-header .container {
   display: flex;
   justify-content: space-between;
@@ -433,7 +441,8 @@ a:hover {
 /* === Responsive Design === */
 @media (max-width: 768px) {
   .site-header {
-    position: relative;
+    position: relative !important;
+    top: auto !important;
   }
   
   .site-header .container {
@@ -501,6 +510,11 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+  .site-header {
+    position: relative !important;
+    top: auto !important;
+  }
+  
   :root {
     --spacing-md: 1rem;
     --spacing-lg: 2rem;
