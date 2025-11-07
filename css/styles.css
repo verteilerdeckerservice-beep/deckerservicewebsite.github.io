@@ -432,6 +432,10 @@ a:hover {
 
 /* === Responsive Design === */
 @media (max-width: 768px) {
+  .site-header {
+    position: relative;
+  }
+  
   .site-header .container {
     flex-direction: column;
     align-items: flex-start;
