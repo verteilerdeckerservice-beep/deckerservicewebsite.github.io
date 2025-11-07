@@ -25,8 +25,50 @@ document.addEventListener('DOMContentLoaded', function() {
   // Besucherzähler
   updateVisitorCount();
   
-  // Mobile Navigation Toggle (falls benötigt)
-  // Kann später erweitert werden für ein Hamburger-Menü
+  // Mobile Navigation Toggle
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+  const navLinks = document.querySelectorAll('.nav a');
+  
+  // Erstelle Overlay für mobile Ansicht
+  const overlay = document.createElement('div');
+  overlay.className = 'nav-overlay';
+  document.body.appendChild(overlay);
+  
+  // Toggle-Funktion
+  function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    nav.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+  }
+  
+  // Event Listener für Hamburger-Button
+  if (menuToggle) {
+    menuToggle.addEventListener('click', toggleMenu);
+  }
+  
+  // Schließe Menü beim Klick auf Overlay
+  overlay.addEventListener('click', toggleMenu);
+  
+  // Schließe Menü beim Klick auf einen Link
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toggleMenu();
+      }
+    });
+  });
+  
+  // Schließe Menü beim Resize (wenn zu Desktop wechselt)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      menuToggle.classList.remove('active');
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
 });
 
 // Besucherzähler Funktion
