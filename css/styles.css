@@ -92,13 +92,17 @@ p {
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: var(--transition);
+  transition: transform 0.3s ease, text-decoration 0.3s ease;
   display: inline-block;
 }
 
 a:hover {
   transform: scale(1.05);
   text-decoration: underline;
+}
+
+a:not(.btn):not(.nav a):not(.card) {
+  transform-origin: center;
 }
 
 /* === Container === */
@@ -452,35 +456,40 @@ a:hover {
 .footer-top a {
   color: var(--color-accent);
   display: inline-block;
+  transition: transform 0.3s ease;
+  transform-origin: center;
 }
 
 .footer-top a:hover {
   transform: scale(1.05);
+  text-decoration: underline;
 }
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
   gap: var(--spacing-sm);
   font-size: 0.9rem;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-bottom a {
+.footer-bottom > a {
   color: var(--color-accent);
   margin: 0 var(--spacing-xs);
   display: inline-block;
+  transition: var(--transition);
 }
 
-.footer-bottom a:hover {
+.footer-bottom > a:hover {
   transform: scale(1.05);
+  text-decoration: none;
 }
 
-.footer-bottom p {
+.footer-bottom > p {
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
+  text-align: center;
 }
 
 .visitor-counter {
@@ -488,10 +497,11 @@ a:hover {
   align-items: center;
   gap: var(--spacing-xs);
   font-size: 0.8rem;
-  margin-top: var(--spacing-xs);
   width: 100%;
   justify-content: center;
   color: rgba(255, 255, 255, 0.6);
+  margin-top: var(--spacing-xs);
+  order: 3;
 }
 
 .counter-icon {
