@@ -14,22 +14,26 @@
   <!-- Quadratisches Icon mit abgerundeten Ecken -->
   <rect x="5" y="5" width="90" height="90" rx="8" ry="8" fill="none" stroke="#1a4d2e" stroke-width="2.5"/>
   
-  <!-- Baum: Kurzer, dicker Stamm -->
-  <rect x="42" y="65" width="16" height="25" fill="#1a4d2e" rx="2"/>
+  <!-- Hügel (dunkelgrün) - bildet die Basis -->
+  <path d="M 5 95 Q 25 88, 45 92 Q 65 88, 95 95 L 95 100 L 5 100 Z" fill="#1a4d2e"/>
   
-  <!-- Baum: Dichte, unregelmäßige, wolkenartige Krone -->
-  <ellipse cx="50" cy="50" rx="22" ry="28" fill="#1a4d2e"/>
-  <ellipse cx="45" cy="48" rx="18" ry="24" fill="#1a4d2e"/>
-  <ellipse cx="55" cy="48" rx="18" ry="24" fill="#1a4d2e"/>
-  <ellipse cx="50" cy="42" rx="16" ry="22" fill="#1a4d2e"/>
-  <ellipse cx="48" cy="45" rx="14" ry="20" fill="#1a4d2e"/>
-  <ellipse cx="52" cy="45" rx="14" ry="20" fill="#1a4d2e"/>
+  <!-- Baum: Sichtbarer Stamm -->
+  <rect x="42" y="70" width="16" height="20" fill="#1a4d2e" rx="2"/>
   
-  <!-- Zwei geschwungene Linien für Hügel -->
-  <path d="M 15 85 Q 30 75, 45 80 Q 60 75, 85 85" stroke="#1a4d2e" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M 12 90 Q 28 80, 43 85 Q 58 80, 88 90" stroke="#1a4d2e" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Baum: Volle, runde Krone -->
+  <circle cx="50" cy="58" r="18" fill="#1a4d2e"/>
+  <ellipse cx="50" cy="55" rx="20" ry="22" fill="#1a4d2e"/>
+  <ellipse cx="48" cy="53" rx="17" ry="20" fill="#1a4d2e"/>
+  <ellipse cx="52" cy="53" rx="17" ry="20" fill="#1a4d2e"/>
+  
+  <!-- Heller, geschwungener Pfad/Weg (weiß) - von unten links zur Mitte -->
+  <path d="M 8 94 Q 20 90, 35 92 Q 50 90, 65 92 Q 80 90, 92 94" 
+        stroke="white" 
+        stroke-width="5" 
+        fill="none" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"/>
   
   <!-- Text: DSD -->
   <text x="110" y="65" class="dsd-text">DSD</text>
 </svg>
-
