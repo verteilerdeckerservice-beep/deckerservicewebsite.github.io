@@ -76,27 +76,19 @@ function updateVisitorCount() {
   const counterElement = document.getElementById('visitorCount');
   if (!counterElement) return;
   
-  // Prüfe ob bereits heute gezählt wurde
-  const today = new Date().toDateString();
-  const lastVisit = localStorage.getItem('lastVisit');
+  // Hole aktuellen Zählerstand
   const currentCount = parseInt(localStorage.getItem('visitorCount') || '0', 10);
   
-  // Wenn heute noch nicht gezählt wurde, erhöhe den Zähler
-  if (lastVisit !== today) {
-    const newCount = currentCount + 1;
-    localStorage.setItem('visitorCount', newCount.toString());
-    localStorage.setItem('lastVisit', today);
-    
-    // Animation beim Update
-    counterElement.style.transform = 'scale(1.2)';
-    setTimeout(() => {
-      counterElement.textContent = formatNumber(newCount);
-      counterElement.style.transform = 'scale(1)';
-    }, 200);
-  } else {
-    // Zeige aktuelle Anzahl
-    counterElement.textContent = formatNumber(currentCount);
-  }
+  // Erhöhe den Zähler bei jedem Aufruf
+  const newCount = currentCount + 1;
+  localStorage.setItem('visitorCount', newCount.toString());
+  
+  // Animation beim Update
+  counterElement.style.transform = 'scale(1.2)';
+  setTimeout(() => {
+    counterElement.textContent = formatNumber(newCount);
+    counterElement.style.transform = 'scale(1)';
+  }, 200);
 }
 
 // Zahl formatieren (Tausender-Trennzeichen)
