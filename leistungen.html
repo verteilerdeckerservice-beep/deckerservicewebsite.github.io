@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Leistungen & Preisliste | DECKER-SERVICE DIENSTLEISTUNGEN</title>
+  <meta name="description" content="Preisliste für Garten- und Landschaftspflege Dienstleistungen von DECKER-SERVICE" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <style>
+    .price-list-section {
+      background-color: var(--color-bg-light);
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .price-list-header {
+      text-align: center;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .price-list-header h1 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+    }
+    
+    .price-list-header p {
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+    }
+    
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: var(--shadow-md);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      margin-bottom: var(--spacing-lg);
+    }
+    
+    .price-table thead {
+      background-color: var(--color-primary);
+      color: white;
+    }
+    
+    .price-table th {
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: left;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    .price-table td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+    
+    .price-table tbody tr:hover {
+      background-color: var(--color-bg-light);
+    }
+    
+    .price-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .pos-nr {
+      font-weight: 600;
+      color: var(--color-primary);
+      width: 80px;
+    }
+    
+    .service-name {
+      font-weight: 500;
+    }
+    
+    .price {
+      text-align: right;
+      font-weight: 600;
+      color: var(--color-success);
+      white-space: nowrap;
+    }
+    
+    .category-header {
+      background-color: var(--color-primary-dark) !important;
+      color: white !important;
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+    
+    .category-header td {
+      padding: var(--spacing-md);
+      border-bottom: 2px solid var(--color-primary);
+    }
+    
+    .notes-section {
+      background-color: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      margin-top: var(--spacing-lg);
+    }
+    
+    .notes-section h3 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-md);
+      border-bottom: 2px solid var(--color-accent);
+      padding-bottom: var(--spacing-xs);
+    }
+    
+    .notes-list {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .notes-list li {
+      padding: var(--spacing-xs) 0;
+      padding-left: var(--spacing-md);
+      position: relative;
+      color: var(--color-text-light);
+    }
+    
+    .notes-list li::before {
+      content: "•";
+      color: var(--color-accent);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+    
+    .contact-box {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+      color: white;
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-lg);
+      margin-top: var(--spacing-lg);
+      text-align: center;
+    }
+    
+    .contact-box h3 {
+      color: white;
+      margin-bottom: var(--spacing-md);
+    }
+    
+    .contact-box a {
+      color: white;
+      text-decoration: underline;
+    }
+    
+    .contact-box a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+    
+    @media (max-width: 768px) {
+      .price-table {
+        font-size: 0.9rem;
+      }
+      
+      .price-table th,
+      .price-table td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+      }
+      
+      .price-table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo-placeholder logo-primary">
+        <img src="assets/img/logo-primary.png" alt="DECKER-SERVICE Logo" class="logo" onerror="this.src='assets/img/logo-primary.svg';" />
+      </div>
+      <div class="logo-placeholder logo-secondary">
+        <img src="assets/img/logo-secondary.png" alt="DECKER-SERVICE Logo 2" class="logo secondary" onerror="this.src='assets/img/logo-secondary.svg';" />
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Start</a>
+      <a href="about.html">Über uns</a>
+      <a href="leistungen.html" class="active">Leistungen</a>
+      <a href="referenzen.html">Referenzen</a>
+      <a href="kontakt.html" class="btn">Angebot anfordern</a>
+    </nav>
+  </header>
+
+  <section class="price-list-section">
+    <div class="container">
+      <div class="price-list-header">
+        <h1>Preisliste - Dienstleistungen</h1>
+        <p>Garten- und Landschaftspflege (netto zzgl. MwSt.)</p>
+      </div>
+
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th class="pos-nr">Pos.-Nr.</th>
+            <th>Dienstleistung</th>
+            <th class="price">Preis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="category-header">
+            <td colspan="3">Allgemeine Dienstleistungen</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">1</td>
+            <td class="service-name">Rasenmähen u. Freischneiden (bis 500 m²)</td>
+            <td class="price">ab 50 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">2</td>
+            <td class="service-name">Rasenmähen u. Freischneiden (ab 500 m²)</td>
+            <td class="price">pauschal + 30 €</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">3</td>
+            <td class="service-name">Vertikutieren</td>
+            <td class="price">ab 50 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">4</td>
+            <td class="service-name">Nachsäen</td>
+            <td class="price">ab 40 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">5</td>
+            <td class="service-name">Laubentfernung</td>
+            <td class="price">40 € je Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">6</td>
+            <td class="service-name">Mulcharbeiten (bis 500 m²)</td>
+            <td class="price">ab 75 € + 4 €/m²</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">7</td>
+            <td class="service-name">Mulcharbeiten (ab 500 m²)</td>
+            <td class="price">pauschal + 50 €</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">8</td>
+            <td class="service-name">Heckenschnitt (bis 2 m Höhe)</td>
+            <td class="price">ab 50 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">9</td>
+            <td class="service-name">Heckenschnitt (ab 2 m Höhe)</td>
+            <td class="price">50 €/Stunde + 8 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">10</td>
+            <td class="service-name">Gehölzrückschnitt (Sträucher)</td>
+            <td class="price">ab 45 €</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">11</td>
+            <td class="service-name">Baumschnitt</td>
+            <td class="price">ab 50 €</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">12</td>
+            <td class="service-name">Bepflanzung inkl. Pflanzsubstrat</td>
+            <td class="price">50 €/m²</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">13</td>
+            <td class="service-name">Beetneuanlage</td>
+            <td class="price">65 €/m²</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">14</td>
+            <td class="service-name">Unkrautentfernung (mechanisch)</td>
+            <td class="price">40 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">15</td>
+            <td class="service-name">Unkrautentfernung (thermisch)</td>
+            <td class="price">55 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">16</td>
+            <td class="service-name">Pflasterflächen reinigen</td>
+            <td class="price">5 €/m²</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">17</td>
+            <td class="service-name">Entsorgung Grüngut</td>
+            <td class="price">35 €/m³</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">18</td>
+            <td class="service-name">Schneeräumung (bis 100 m²)</td>
+            <td class="price">ab 60 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">19</td>
+            <td class="service-name">Streuarbeiten</td>
+            <td class="price">ab 35 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">20</td>
+            <td class="service-name">Beratung & Planung</td>
+            <td class="price">55 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">21</td>
+            <td class="service-name">Dauerauftrag (bis 500 m²)</td>
+            <td class="price">720 € (6 Monate)</td>
+          </tr>
+
+          <tr class="category-header">
+            <td colspan="3">Geräteverleih</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">22</td>
+            <td class="service-name">Rasenmäher</td>
+            <td class="price">25 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">23</td>
+            <td class="service-name">Aufsitzmäher</td>
+            <td class="price">80 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">24</td>
+            <td class="service-name">Motorsense/Freischneider</td>
+            <td class="price">30 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">25</td>
+            <td class="service-name">Heckenschere (Akku/Benzin)</td>
+            <td class="price">25 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">26</td>
+            <td class="service-name">Kettensäge inkl. PSA</td>
+            <td class="price">45 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">27</td>
+            <td class="service-name">Laubbläser</td>
+            <td class="price">20 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">28</td>
+            <td class="service-name">Thermisches Unkrautgerät</td>
+            <td class="price">45 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">29</td>
+            <td class="service-name">Hochdruckreiniger</td>
+            <td class="price">35 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">30</td>
+            <td class="service-name">Streugerät (manuell)</td>
+            <td class="price">20 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">31</td>
+            <td class="service-name">Schubkarre & Handgeräte</td>
+            <td class="price">25 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">32</td>
+            <td class="service-name">Vertikutiergerät</td>
+            <td class="price">40 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">33</td>
+            <td class="service-name">Minibagger (1,5 t)</td>
+            <td class="price">160 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">34</td>
+            <td class="service-name">Tieflader für Minibagger</td>
+            <td class="price">120 €/Tag</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">35</td>
+            <td class="service-name">Transport vom Aufsitzmäher</td>
+            <td class="price">80 €/Tag <span style="color: var(--color-text-light);">*)</span></td>
+          </tr>
+          <tr>
+            <td class="pos-nr">36</td>
+            <td class="service-name">Anhänger (1,5t)</td>
+            <td class="price">40 €/Tag</td>
+          </tr>
+
+          <tr class="category-header">
+            <td colspan="3">Weitere Dienstleistungen / Gebühren</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">37</td>
+            <td class="service-name">Bagger-/Aushubarbeiten</td>
+            <td class="price">66 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">38</td>
+            <td class="service-name">Anfahrtspauschale</td>
+            <td class="price">0,85 €/km</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">39</td>
+            <td class="service-name">Anfahrtspauschale bei Erstbesichtigung</td>
+            <td class="price">0,35 €/km</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">40</td>
+            <td class="service-name">Besorgungen</td>
+            <td class="price">60 €/Stunde</td>
+          </tr>
+          <tr>
+            <td class="pos-nr">41</td>
+            <td class="service-name">Besorgungsfahrt</td>
+            <td class="price">0,90 €/km</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notes-section">
+        <h3>Wichtige Hinweise</h3>
+        <ul class="notes-list">
+          <li>Rabatte bei Pflegeverträgen oder Großflächen möglich</li>
+          <li>Alle Preise sind Richtwerte und abhängig vom Aufwand</li>
+          <li>Noch nicht zur Verfügung stehende Gerätschaften <strong>*)</strong></li>
+          <li>Alle genannten Preise netto zzgl. MwSt.</li>
+          <li>Zahlung Bar und per Überweisung möglich</li>
+          <li>Etwaige Änderungen an der Auflistung sind vorbehalten</li>
+          <li><strong>Daueraufträge</strong> umfassen 1 x Gartenpflege/Monat (+ 10% Reduzierung auf die geleisteten Arbeiten u. Produkte)</li>
+        </ul>
+      </div>
+
+      <div class="contact-box">
+        <h3>Haben Sie Fragen zu unseren Leistungen?</h3>
+        <p style="margin-bottom: var(--spacing-sm);">
+          Kontaktieren Sie uns gerne für ein individuelles Angebot!
+        </p>
+        <p>
+          <strong>E-Mail:</strong> <a href="mailto:info@decker-service.de">info@decker-service.de</a><br />
+          <strong>Support E-Mail:</strong> <a href="mailto:support@deckerservice.de">support@deckerservice.de</a><br />
+          <strong>Telefon:</strong> <a href="tel:+491749025136">0174 9025136</a>
+        </p>
+        <div style="margin-top: var(--spacing-md);">
+          <a href="kontakt.html" class="btn" style="background-color: white; color: var(--color-primary); border-color: white;">Angebot anfordern</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-top container">
+      <div>
+        <strong>Kontakt:</strong><br />
+        Tel.: 0174 9025136<br />
+        E-Mail: <a href="mailto:info@decker-service.de">info@decker-service.de</a> | <a href="mailto:support@deckerservice.de">support@deckerservice.de</a><br />
+        Betriebszeiten: Mo–Fr 16:30–18:00, Sa 7:30–16:00
+      </div>
+      <div>
+        <a href="kontakt.html" class="btn">Angebot anfordern</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+      <p>&copy; <span id="year"></span> DECKER-SERVICE DIENSTLEISTUNGEN</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
