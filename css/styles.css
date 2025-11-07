@@ -547,6 +547,113 @@ a:hover {
   }
 }
 
+/* === About Page Styles === */
+.about-content {
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 900px;
+}
+
+.about-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-intro {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-xs);
+  font-weight: 700;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-highlight {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: var(--spacing-sm);
+}
+
+.about-actions {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 2px solid var(--color-border);
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .about-intro {
+    font-size: 1.5rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .about-text {
+    font-size: 1rem;
+  }
+  
+  .about-highlight {
+    font-size: 1.2rem;
+  }
+  
+  .about-actions {
+    flex-direction: column;
+  }
+  
+  .about-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-intro {
+    font-size: 1.3rem;
+  }
+  
+  .about-subtitle {
+    font-size: 1rem;
+  }
+  
+  .about-text {
+    font-size: 0.95rem;
+  }
+  
+  .about-highlight {
+    font-size: 1.1rem;
+  }
+}
+
 /* === Utility Classes === */
 .text-center {
   text-align: center;
