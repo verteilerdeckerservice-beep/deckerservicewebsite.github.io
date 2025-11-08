@@ -16,6 +16,17 @@
     .price-list-header {
       text-align: center;
       margin-bottom: var(--spacing-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-md);
+    }
+    
+    .price-list-logo {
+      max-height: 120px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
     
     .price-list-header h1 {
@@ -26,6 +37,201 @@
     .price-list-header p {
       color: var(--color-text-light);
       font-size: 1.1rem;
+    }
+    
+    .download-section {
+      max-width: 1200px;
+      margin: var(--spacing-xl) auto 0;
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+    
+    .download-btn {
+      background-color: transparent;
+      border: 2px solid var(--color-accent);
+      color: var(--color-accent);
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: var(--transition);
+      max-width: 300px;
+      text-align: center;
+    }
+    
+    .download-btn:hover {
+      background-color: var(--color-accent);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    /* Kopierschutz */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    .price-table,
+    .notes-section,
+    .contact-box {
+      -webkit-user-select: text;
+      -moz-user-select: text;
+      -ms-user-select: text;
+      user-select: text;
+    }
+    
+    @media print {
+      body {
+        -webkit-user-select: auto;
+        -moz-user-select: auto;
+        -ms-user-select: auto;
+        user-select: auto;
+        font-size: 0.85rem;
+        line-height: 1.4;
+      }
+      
+      .site-header,
+      .download-section,
+      .menu-toggle,
+      .nav,
+      .contact-box,
+      footer,
+      .back-button-container {
+        display: none !important;
+      }
+      
+      section.container:last-of-type {
+        display: none !important;
+      }
+      
+      .price-list-section {
+        background-color: white;
+        padding: 0.4rem 0 !important;
+        margin: 0 !important;
+      }
+      
+      .price-list-header {
+        margin-bottom: 0.5rem !important;
+        padding: 0 !important;
+        text-align: center;
+      }
+      
+      .price-list-header h1 {
+        font-size: 1.4rem !important;
+        margin: 0 0 0.2rem 0 !important;
+        padding: 0 !important;
+        color: var(--color-primary) !important;
+        font-weight: 700 !important;
+      }
+      
+      .price-list-header p {
+        font-size: 0.95rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: var(--color-text-light) !important;
+      }
+      
+      .price-table {
+        box-shadow: none;
+        page-break-inside: avoid;
+        font-size: 0.8rem !important;
+        margin: 0 0 0.4rem 0 !important;
+        border-spacing: 0 !important;
+        border: 1px solid #ddd !important;
+      }
+      
+      .price-table th {
+        padding: 0.2rem 0.5rem !important;
+        font-size: 0.85rem !important;
+        line-height: 1.2 !important;
+        font-weight: 600 !important;
+        background-color: var(--color-primary) !important;
+        color: white !important;
+      }
+      
+      .price-table td {
+        padding: 0.15rem 0.5rem !important;
+        font-size: 0.8rem !important;
+        line-height: 1.2 !important;
+        border-bottom: 1px solid #e0e0e0 !important;
+      }
+      
+      .price-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9 !important;
+      }
+      
+      .category-header td {
+        padding: 0.2rem 0.5rem !important;
+        font-size: 0.9rem !important;
+        line-height: 1.2 !important;
+        background-color: var(--color-primary-dark) !important;
+        color: white !important;
+        font-weight: 700 !important;
+      }
+      
+      .pos-nr {
+        width: 50px !important;
+      }
+      
+      .price {
+        white-space: nowrap !important;
+        font-weight: 600 !important;
+      }
+      
+      .notes-section {
+        box-shadow: none;
+        page-break-inside: avoid;
+        margin: 0.4rem 0 0 0 !important;
+        padding: 0.4rem !important;
+        border: 1px solid #ddd !important;
+        border-radius: 4px !important;
+      }
+      
+      .notes-section h3 {
+        font-size: 0.95rem !important;
+        margin: 0 0 0.3rem 0 !important;
+        padding: 0 0 0.3rem 0 !important;
+        border-bottom: 2px solid var(--color-accent) !important;
+        color: var(--color-primary) !important;
+        font-weight: 600 !important;
+      }
+      
+      .notes-list {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      .notes-list li {
+        padding: 0.1rem 0 !important;
+        margin: 0 !important;
+        font-size: 0.8rem !important;
+        line-height: 1.2 !important;
+        color: var(--color-text-light) !important;
+      }
+      
+      .price-table a,
+      .contact-box a {
+        color: inherit !important;
+        text-decoration: none !important;
+      }
+      
+      .container {
+        max-width: 100% !important;
+        padding: 0 0.5rem !important;
+        margin: 0 !important;
+      }
+      
+      .price-list-section .container {
+        padding: 0 0.5rem !important;
+      }
+      
+      @page {
+        margin: 0.8cm;
+        size: A4;
+      }
     }
     
     .price-table {
@@ -449,7 +655,11 @@
     </div>
   </section>
 
-  <div class="container" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); padding-left: var(--spacing-md); padding-right: var(--spacing-md); border-top: 2px solid var(--color-border);">
+  <div class="download-section" style="border-top: 2px solid var(--color-border); padding-top: var(--spacing-lg);">
+    <a href="#" class="download-btn btn btn-secondary" onclick="window.print(); return false;" style="margin-left: 0; padding-left: 1.5rem; text-align: center; max-width: 300px;">Preisliste drucken / als PDF speichern</a>
+  </div>
+
+  <div class="container back-button-container" style="margin-top: var(--spacing-xl); padding-top: var(--spacing-lg); padding-left: var(--spacing-md); padding-right: var(--spacing-md); border-top: 2px solid var(--color-border);">
     <a href="index.html" class="btn btn-secondary">Zurück zur Startseite</a>
   </div>
 
@@ -480,6 +690,58 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Kopierschutz
+    document.addEventListener('DOMContentLoaded', function() {
+      // Verhindere Rechtsklick
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+        return false;
+      });
+      
+      // Verhindere Tastenkombinationen für Kopieren
+      document.addEventListener('keydown', function(e) {
+        // Strg+C, Strg+A, Strg+X, Strg+V, Strg+S
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'a' || e.key === 'A' || e.key === 'x' || e.key === 'X' || e.key === 'v' || e.key === 'V' || e.key === 's' || e.key === 'S')) {
+          e.preventDefault();
+          return false;
+        }
+        // F12 (Entwicklertools)
+        if (e.key === 'F12') {
+          e.preventDefault();
+          return false;
+        }
+      });
+      
+      // Verhindere Drag & Drop
+      document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+        return false;
+      });
+      
+      // Verhindere Textauswahl außerhalb der erlaubten Bereiche
+      document.addEventListener('selectstart', function(e) {
+        var target = e.target;
+        var allowedElements = ['table', 'td', 'th', 'p', 'li', 'div', 'span', 'a'];
+        var isAllowed = false;
+        
+        for (var i = 0; i < allowedElements.length; i++) {
+          if (target.tagName && target.tagName.toLowerCase() === allowedElements[i]) {
+            var parent = target.closest('.price-table, .notes-section, .contact-box');
+            if (parent) {
+              isAllowed = true;
+              break;
+            }
+          }
+        }
+        
+        if (!isAllowed) {
+          e.preventDefault();
+          return false;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
 
