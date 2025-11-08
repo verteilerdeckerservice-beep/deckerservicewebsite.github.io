@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visitenkarte | DECKER-SERVICE DIENSTLEISTUNGEN</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="assets/img/favicon.png" />
+  <style>
+    body {
+      background-color: var(--color-bg-light);
+      padding: var(--spacing-xl) var(--spacing-md);
+    }
+    
+    .business-card-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 200px);
+    }
+    
+    .business-card {
+      background-color: white;
+      width: 100%;
+      max-width: 100%;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+    
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-lg);
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: var(--spacing-md);
+    }
+    
+    .card-logo {
+      flex-shrink: 0;
+    }
+    
+    .card-logo img {
+      max-height: 180px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+    }
+    
+    .card-title {
+      flex: 1;
+    }
+    
+    .card-title h1 {
+      color: var(--color-primary);
+      font-size: 2rem;
+      margin: 0;
+      font-weight: 700;
+    }
+    
+    .card-title p {
+      color: var(--color-text-light);
+      font-size: 1.1rem;
+      margin: var(--spacing-xs) 0 0 0;
+    }
+    
+    .card-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-md);
+    }
+    
+    .card-info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+    
+    .card-info-item {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
+    
+    .card-info-label {
+      color: var(--color-primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .card-info-value {
+      color: var(--color-text);
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    
+    .card-info-value a {
+      color: var(--color-accent);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .card-info-value a:hover {
+      color: var(--color-accent-hover);
+      text-decoration: underline;
+    }
+    
+    .card-footer {
+      border-top: 2px solid var(--color-border);
+      padding-top: var(--spacing-md);
+      text-align: center;
+    }
+    
+    .card-footer p {
+      color: var(--color-text-light);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    
+    .download-section {
+      max-width: 1200px;
+      margin: var(--spacing-xl) auto 0;
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+    
+    .download-btn {
+      background-color: var(--color-accent);
+      color: white;
+      padding: var(--spacing-md) var(--spacing-lg);
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: var(--transition);
+      border: 2px solid var(--color-accent);
+    }
+    
+    .download-btn:hover {
+      background-color: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+      }
+      
+      .download-section {
+        display: none;
+      }
+      
+      .business-card {
+        box-shadow: none;
+        max-width: 100%;
+        padding: var(--spacing-lg);
+      }
+      
+      .business-card-container {
+        min-height: auto;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .card-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .card-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .card-title h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="business-card-container">
+    <div class="business-card" id="businessCard">
+      <div class="card-header">
+        <div class="card-logo">
+          <img src="assets/img/logo-secondary.png" alt="DSD Logo" onerror="this.src='assets/img/logo-secondary.svg';" />
+        </div>
+        <div class="card-title">
+          <h1>DECKER-SERVICE DIENSTLEISTUNGEN</h1>
+          <p>Ihr zuverlässiger Partner für Dienstleistungen</p>
+        </div>
+      </div>
+      
+      <div class="card-content">
+        <div class="card-info">
+          <div class="card-info-item">
+            <div class="card-info-label">Telefon</div>
+            <div class="card-info-value">
+              <a href="tel:+491749025136">0174 9025136</a>
+            </div>
+          </div>
+          
+          <div class="card-info-item">
+            <div class="card-info-label">E-Mail</div>
+            <div class="card-info-value">
+              <a href="mailto:info@decker-service.de">info@decker-service.de</a>
+            </div>
+          </div>
+          
+          <div class="card-info-item">
+            <div class="card-info-label">Support E-Mail</div>
+            <div class="card-info-value">
+              <a href="mailto:support@deckerservice.de">support@deckerservice.de</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card-info">
+          <div class="card-info-item">
+            <div class="card-info-label">Betriebszeiten</div>
+            <div class="card-info-value">
+              Mo–Fr: 16:30–18:00 Uhr<br />
+              Sa: 7:30–16:00 Uhr<br />
+              So: Geschlossen
+            </div>
+          </div>
+          
+          <div class="card-info-item">
+            <div class="card-info-label">Servicegebiet</div>
+            <div class="card-info-value">
+              Bad Kreuznach und Umgebung
+            </div>
+          </div>
+          
+          <div class="card-info-item">
+            <div class="card-info-label">Website</div>
+            <div class="card-info-value">
+              <a href="https://decker-service.de/leistungen.html" target="_blank">decker-service.de</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card-footer">
+        <p>Qualität und Ordnung sind unser Anspruch – vom ersten Kontakt bis zur Ausführung.</p>
+        <p style="margin-top: var(--spacing-sm); font-weight: 600; color: var(--color-primary);">Wir machen's ordentlich.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="download-section">
+    <a href="#" class="download-btn" onclick="window.print(); return false;">Visitenkarte drucken / als PDF speichern</a>
+  </div>
+</body>
+</html>
+
