@@ -39,6 +39,10 @@
       font-size: 1.1rem;
     }
     
+    .price-list-header-logo {
+      display: none;
+    }
+    
     .download-section {
       max-width: 1200px;
       margin: var(--spacing-xl) auto 0;
@@ -117,6 +121,29 @@
         margin-bottom: 0.5rem !important;
         padding: 0 !important;
         text-align: center;
+        position: relative;
+      }
+      
+      .price-list-header-logo {
+        display: block !important;
+        position: absolute;
+        top: -0.5rem;
+        left: 0;
+        max-width: 120px;
+        max-height: 100px;
+        width: auto;
+        height: 100px;
+        z-index: 1;
+        overflow: hidden;
+      }
+      
+      .price-list-header-logo img {
+        max-width: 120px;
+        max-height: 120px;
+        width: auto;
+        height: auto;
+        display: block;
+        margin-bottom: -20px;
       }
       
       .price-list-header h1 {
@@ -400,6 +427,7 @@
   <section class="price-list-section">
     <div class="container">
       <div class="price-list-header">
+        <img src="assets/img/logo-secondary.png" alt="DSD Logo" class="price-list-header-logo" onerror="this.src='assets/img/logo-secondary.svg';" />
         <h1>Preisliste - Dienstleistungen</h1>
         <p>Garten- und Landschaftspflege (netto zzgl. MwSt.)</p>
       </div>
