@@ -239,6 +239,16 @@
         color: var(--color-text-light) !important;
       }
       
+      .notes-section {
+        margin: 0.3rem 0 0 0 !important;
+        padding: 0.3rem !important;
+      }
+      
+      .notes-section h3 {
+        margin: 0 0 0.2rem 0 !important;
+        padding: 0 0 0.2rem 0 !important;
+      }
+      
       .price-table a,
       .contact-box a {
         color: inherit !important;
@@ -256,8 +266,26 @@
       }
       
       @page {
-        margin: 0.8cm;
+        margin: 0.8cm !important;
         size: A4;
+      }
+      
+      * {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      .price-list-section {
+        margin: 0 !important;
+        padding: 0.3rem 0 !important;
+      }
+      
+      .price-list-header {
+        margin-bottom: 0.3rem !important;
+      }
+      
+      .price-table {
+        margin: 0 0 0.3rem 0 !important;
       }
     }
     
@@ -272,8 +300,8 @@
       display: table;
     }
     
-    /* Mobile Optimierung für Preisliste */
-    @media (max-width: 768px) {
+    /* Mobile Optimierung für Preisliste - nur für Handys */
+    @media (max-width: 480px) {
       .price-list-section {
         padding: var(--spacing-md) var(--spacing-sm);
       }
@@ -383,15 +411,13 @@
       }
       
       .price-list-header h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
       }
       
       .price-list-header p {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
       }
-    }
-    
-    @media (max-width: 480px) {
+      
       .price-table {
         font-size: 0.8rem;
       }
@@ -408,10 +434,6 @@
       
       .price-table .price {
         font-size: 0.95rem;
-      }
-      
-      .price-list-header h1 {
-        font-size: 1.2rem;
       }
     }
     
