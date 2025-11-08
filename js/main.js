@@ -2,6 +2,7 @@
 // Hauptfunktionalitäten
 
 // Cookie-Banner Funktionen
+
 function getCookie(name) {
   const value = `; ${document.cookie}`;
   const parts = value.split(`; ${name}=`);
@@ -17,55 +18,44 @@ function setCookie(name, value, days) {
 }
 
 function showCookieBanner() {
+  // Cookie-Banner nur auf der Hauptstartseite (index.html) anzeigen
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const isHomePage = currentPage === 'index.html' || currentPage === '' || currentPage === '/';
+  
+  if (!isHomePage) {
+    // Auf anderen Seiten das Banner nicht anzeigen
+    const banner = document.getElementById('cookieBanner');
+    if (banner) {
+      banner.style.display = 'none';
+    }
+    document.body.classList.add('cookies-accepted');
+    return;
+  }
+  
+  // Nur auf der Hauptstartseite prüfen und anzeigen
   const cookieConsent = getCookie('cookieConsent');
   if (!cookieConsent) {
+    // Banner nur auf der Startseite anzeigen
     const banner = document.getElementById('cookieBanner');
     if (banner) {
       banner.style.display = 'block';
       document.body.style.overflow = 'hidden';
-      // Blockiere alle Links und Navigation
-      blockNavigation();
     }
+    document.body.classList.add('cookies-accepted');
   } else {
     // Cookie-Einwilligung bereits erteilt, Website normal nutzbar
+    const banner = document.getElementById('cookieBanner');
+    if (banner) {
+      banner.style.display = 'none';
+    }
     document.body.classList.add('cookies-accepted');
   }
 }
 
-function blockNavigation() {
-  // Blockiere alle Links außer dem Datenschutz-Link
-  document.querySelectorAll('a:not([href*="datenschutz.html"])').forEach(link => {
-    link.addEventListener('click', function(e) {
-      const cookieConsent = getCookie('cookieConsent');
-      if (!cookieConsent) {
-        e.preventDefault();
-        e.stopPropagation();
-        // Zeige Cookie-Banner erneut an
-        const banner = document.getElementById('cookieBanner');
-        if (banner) {
-          banner.style.display = 'block';
-          document.body.style.overflow = 'hidden';
-        }
-        return false;
-      }
-    }, true);
-  });
-  
-  // Blockiere Formular-Submits
-  document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function(e) {
-      const cookieConsent = getCookie('cookieConsent');
-      if (!cookieConsent) {
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-      }
-    }, true);
-  });
-}
+// Navigation wird nicht mehr blockiert - Cookie-Banner erscheint nur einmal
 
 function acceptCookies() {
-  setCookie('cookieConsent', 'accepted', 730); // 2 Jahre
+  setCookie('cookieConsent', 'accepted', 730); // 2 Jahre - gilt für alle Seiten
   const banner = document.getElementById('cookieBanner');
   if (banner) {
     banner.style.display = 'none';
@@ -74,12 +64,11 @@ function acceptCookies() {
   document.body.classList.add('cookies-accepted');
   // Besucherzähler aktualisieren nach Cookie-Einwilligung
   updateVisitorCount();
-  // Navigation wieder freigeben
-  unblockNavigation();
+  // Cookie gilt jetzt automatisch für alle Seiten - keine weitere Aktion nötig
 }
 
 function declineCookies() {
-  setCookie('cookieConsent', 'declined', 730); // 2 Jahre
+  setCookie('cookieConsent', 'declined', 730); // 2 Jahre - gilt für alle Seiten
   const banner = document.getElementById('cookieBanner');
   if (banner) {
     banner.style.display = 'none';
@@ -88,13 +77,7 @@ function declineCookies() {
   // Auch ohne Einwilligung können technisch notwendige Cookies gesetzt werden
   document.body.classList.add('cookies-accepted');
   updateVisitorCount();
-  // Navigation wieder freigeben
-  unblockNavigation();
-}
-
-function unblockNavigation() {
-  // Entferne Event Listener nicht, aber erlaube Navigation durch Cookie-Prüfung
-  // Die Event Listener prüfen weiterhin das Cookie, aber jetzt ist es gesetzt
+  // Cookie gilt jetzt automatisch für alle Seiten - keine weitere Aktion nötig
 }
 
 // Jahr im Footer aktualisieren
