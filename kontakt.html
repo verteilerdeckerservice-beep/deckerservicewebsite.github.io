@@ -1,49 +1,142 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Kontakt – Decker-Service</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt | DECKER-SERVICE DIENSTLEISTUNGEN</title>
+  <meta name="description" content="Kontaktinformationen von DECKER-SERVICE DIENSTLEISTUNGEN" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 </head>
-
 <body>
-<header class="site-header">
-  <div class="logo">
-    <img src="assets/img/logo-primary.svg" alt="Decker-Service Logo">
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="logo-link">
+          <span class="logo-crop">
+            <img src="assets/img/logo-primary.png" alt="DECKER-SERVICE DIENSTLEISTUNGEN Logo" class="logo" />
+          </span>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Menü öffnen/schließen"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Start</a>
+        <a href="about.html">Über uns</a>
+        <a href="scanschmiede.html">Scanschmiede</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: var(--spacing-xl) var(--spacing-md); max-width: 800px;">
+    <section style="margin-bottom: var(--spacing-xl);">
+      <h2 style="text-align:center;">DECKER-SERVICE DIENSTLEISTUNGEN</h2>
+      <div class="person-cards">
+        <div class="person-card">
+          <h3>Maximilian Decker</h3>
+          <p class="person-role">Recruiting, Vertrieb</p>
+          <div class="contact-info-grid">
+            <strong>Telefon:</strong>
+            <p><a href="tel:+491749025136">0174 9025136</a></p>
+
+            <strong>E-Mail:</strong>
+            <p>
+              <a href="mailto:info@decker-service.de">info@decker-service.de</a><br />
+              <a href="mailto:support@deckerservice.de">support@deckerservice.de</a>
+            </p>
+
+            <strong>Betriebszeiten:</strong>
+            <p>Mo–Fr: 16:30–18:00 Uhr<br />Sa: 7:30–16:00 Uhr<br />So: Geschlossen</p>
+          </div>
+        </div>
+
+        <div class="person-card person-secondary">
+          <h3>Marvin Henrich</h3>
+          <p class="person-role">Produktion, Lager</p>
+          <div class="contact-info-grid">
+            <strong>Telefon:</strong>
+            <p><a href="tel:+49115679708019">0115679708019</a></p>
+
+            <strong>E-Mail:</strong>
+            <p><a href="mailto:info@net-evolution.de">info@net-evolution.de</a></p>
+
+            <strong>Betriebszeiten:</strong>
+            <p>Mo–Fr: 8–18 Uhr</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="form-card">
+        <h3 style="margin-bottom:0.5rem;text-align:center;">Nachricht senden</h3>
+        <p style="text-align:center;color:var(--color-text-light);margin-bottom:1.5rem;">
+          Tel. <a href="tel:+491749025136">0174 9025136</a> · E-Mail <a href="mailto:info@decker-service.de">info@decker-service.de</a><br />
+          Betriebszeiten: Mo–Fr 16:30–18:00, Sa 7:30–16:00
+        </p>
+        <form action="send_vv.php" method="post" class="contact-form">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>E-Mail
+            <input type="email" name="email" required>
+          </label>
+          <label>Betreff
+            <input type="text" name="subject" required>
+          </label>
+          <label>Nachricht
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn">Senden</button>
+        </form>
+      </div>
+    </section>
+
+    <div class="back-link">
+      <a href="index.html" class="btn btn-secondary">Zurück zur Startseite</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <strong>Kontakt:</strong>
+          Tel.: <a href="tel:+491749025136">0174 9025136</a><br />
+          E-Mail: <a href="mailto:info@decker-service.de">info@decker-service.de</a><br />
+          Betriebszeiten: Mo–Fr 16:30–18:00, Sa 7:30–16:00
+        </div>
+        <div class="footer-logo">
+          <img src="assets/img/logo-secondary.png" alt="DSD Logo" onerror="this.src='assets/img/logo-secondary.svg';" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="impressum-holding.html">Impressum Holding</a> ·
+          <a href="impressum-vv.html">Impressum VV UG</a> ·
+          <a href="agb-vv.html">AGB VV UG</a> ·
+          <a href="impressum-scanschmiede.html">Impressum Scanschmiede</a> ·
+          <a href="agb-scanschmiede.html">AGB Scanschmiede</a> ·
+          <a href="widerruf.html">Widerruf</a> ·
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <p>&copy; <span id="year"></span> DECKER-SERVICE DIENSTLEISTUNGEN</p>
+        <div class="visitor-counter"><span>Besucher:</span> <span class="counter-number" id="visitorCount">0</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookieBanner" class="cookie-banner" style="display:none;">
+    <div class="cookie-banner-content">
+      <h3>Cookie-Einstellungen</h3>
+      <p>Wir verwenden nur technisch notwendige Cookies (Ihre Cookie-Einwilligung sowie ein einfacher Besucherzähler). Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      <div class="cookie-banner-buttons">
+        <button id="acceptCookies" class="btn btn-primary">Alle akzeptieren</button>
+        <button id="declineCookies" class="btn btn-secondary">Ablehnen</button>
+      </div>
+    </div>
   </div>
-  <nav class="main-nav">
-    <a href="index.html">Startseite</a>
-    <a href="vv.html">VV UG</a>
-    <a href="scanschmiede.html">Scanschmiede</a>
-    <a href="kontakt.html" class="active">Kontakt</a>
-  </nav>
-</header>
 
-<main class="content">
-  <h1>Kontakt</h1>
-  <form action="send_vv.php" method="post" class="contact-form">
-    <label>Name
-      <input type="text" name="name" required>
-    </label>
-    <label>E-Mail
-      <input type="email" name="email" required>
-    </label>
-    <label>Betreff
-      <input type="text" name="subject" required>
-    </label>
-    <label>Nachricht
-      <textarea name="message" rows="5" required></textarea>
-    </label>
-    <button type="submit">Senden</button>
-  </form>
-</main>
-
-<footer class="site-footer">
-  <p>&copy; 2026 Decker-Service</p>
-  <p>
-    <a href="datenschutz.html">Datenschutz</a>
-  </p>
-</footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

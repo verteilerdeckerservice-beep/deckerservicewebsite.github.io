@@ -1,54 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Decker-Service-Dienstleistungen</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DECKER-SERVICE DIENSTLEISTUNGEN | Wir machen's ordentlich</title>
+  <meta name="description" content="Rekrutierung, Kundenauftragsmanagement und Außendienstrepräsentanz – dazu die Scanschmiede für individuelle Oldtimer- und 3D-Ersatzteile." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 </head>
-
 <body>
-<header class="site-header">
-  <div class="logo">
-    <img src="assets/img/logo-primary.svg" alt="Decker-Service Logo">
-  </div>
-  <nav class="main-nav">
-    <a href="index.html" class="active">Startseite</a>
-    <a href="vv.html">VV UG</a>
-    <a href="scanschmiede.html">Scanschmiede</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="logo-link">
+          <span class="logo-crop">
+            <img src="assets/img/logo-primary.png" alt="DECKER-SERVICE DIENSTLEISTUNGEN Logo" class="logo" />
+          </span>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Menü öffnen/schließen"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html" class="active">Start</a>
+        <a href="about.html">Über uns</a>
+        <a href="scanschmiede.html">Scanschmiede</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="content">
   <section class="hero">
-    <h1>Decker-Service-Dienstleistungen</h1>
-    <p>Professionelle Rekrutierung, Kundenbetreuung und Außendienstrepräsentanz.</p>
-    <p>Von hier aus gelangen Sie zu unseren Bereichen VV UG und Scanschmiede.</p>
+    <div class="container">
+      <h1>Wir machen's ordentlich.</h1>
+      <p>DECKER-SERVICE DIENSTLEISTUNGEN – Rekrutierung, Kundenaufträge und Außendienstrepräsentanz aus einer Hand.</p>
+      <a href="#leistungen" class="btn primary">Leistungen ansehen</a>
+      <a href="kontakt.html" class="btn btn-secondary" style="background:transparent;border-color:#fff;color:#fff;">Kontakt aufnehmen</a>
+    </div>
   </section>
 
-  <section class="columns">
-    <article>
-      <h2>VV UG</h2>
-      <p>Verwaltung, Organisation, Kundenaufträge und Rekrutierung.</p>
-      <a class="btn" href="vv.html">Zur VV UG</a>
-    </article>
+  <section class="section" id="leistungen">
+    <div class="container">
+      <h2>Kerndienstleistungen</h2>
+      <p class="section-intro">Organisation, Kundenbetreuung und Repräsentanz im Außendienst – geführt über unsere Tochtergesellschaft VV UG (haftungsbeschränkt).</p>
 
-    <article>
-      <h2>Scanschmiede</h2>
-      <p>Oldtimer- & Kunststoffersatzteile, gefertigt mit 3D-Druck.</p>
-      <a class="btn" href="scanschmiede.html">Zur Scanschmiede</a>
-    </article>
+      <div class="cards">
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c0-3 2.5-5.3 5.5-5.3s5.5 2.3 5.5 5.3"/>
+              <circle cx="17" cy="9" r="2.6"/><path d="M15.5 13.2c2.4.3 4 2.2 4 4.6"/>
+            </svg>
+          </div>
+          <h3>Rekrutierung</h3>
+          <p>Wir finden und binden die richtigen Ansprechpartner für Ihre Projekte und Kundenbeziehungen.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="4" width="12" height="17" rx="2"/><rect x="9" y="2.5" width="6" height="3" rx="1"/>
+              <line x1="8.5" y1="10" x2="15.5" y2="10"/><line x1="8.5" y1="13.5" x2="15.5" y2="13.5"/><line x1="8.5" y1="17" x2="12.5" y2="17"/>
+            </svg>
+          </div>
+          <h3>Aufträge</h3>
+          <p>Von der Auftragsannahme bis zur Nachverfolgung – wir organisieren Ihre Kundenaufträge zuverlässig.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 21s7-6.1 7-11.5A7 7 0 0 0 5 9.5C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/>
+            </svg>
+          </div>
+          <h3>Vertrieb</h3>
+          <p>Wir vertreten Ihr Unternehmen persönlich vor Ort und pflegen Ihre Kundenbeziehungen im Außendienst.</p>
+        </div>
+      </div>
+    </div>
   </section>
-</main>
 
-<footer class="site-footer">
-  <p>&copy; 2026 Decker-Service-Dienstleistungen</p>
-  <p>
-    <a href="impressum-vv.html">Impressum VV UG</a> |
-    <a href="agb-vv.html">AGB VV UG</a> |
-    <a href="datenschutz.html">Datenschutz</a>
-  </p>
-</footer>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="promo-band">
+        <div>
+          <h3>Scanschmiede – Oldtimer- &amp; 3D-Ersatzteile</h3>
+          <p>Individuelle Kunststoff- und Ersatzteile für Oldtimer im 3D-Druck – direkt im Online-Shop stöbern und anfragen.</p>
+        </div>
+        <a href="scanschmiede.html" class="btn" style="background:#fff;color:var(--color-primary);border-color:#fff;">Zum Shop</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <strong>Kontakt:</strong>
+          Tel.: <a href="tel:+491749025136">0174 9025136</a><br />
+          E-Mail: <a href="mailto:info@decker-service.de">info@decker-service.de</a><br />
+          Betriebszeiten: Mo–Fr 16:30–18:00, Sa 7:30–16:00
+        </div>
+        <div class="footer-logo">
+          <img src="assets/img/logo-secondary.png" alt="DSD Logo" onerror="this.src='assets/img/logo-secondary.svg';" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="impressum-holding.html">Impressum Holding</a> ·
+          <a href="impressum-vv.html">Impressum VV UG</a> ·
+          <a href="agb-vv.html">AGB VV UG</a> ·
+          <a href="impressum-scanschmiede.html">Impressum Scanschmiede</a> ·
+          <a href="agb-scanschmiede.html">AGB Scanschmiede</a> ·
+          <a href="widerruf.html">Widerruf</a> ·
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <p>&copy; <span id="year"></span> DECKER-SERVICE DIENSTLEISTUNGEN</p>
+        <div class="visitor-counter"><span>Besucher:</span> <span class="counter-number" id="visitorCount">0</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookieBanner" class="cookie-banner" style="display:none;">
+    <div class="cookie-banner-content">
+      <h3>Cookie-Einstellungen</h3>
+      <p>Wir verwenden nur technisch notwendige Cookies (Ihre Cookie-Einwilligung sowie ein einfacher Besucherzähler). Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      <div class="cookie-banner-buttons">
+        <button id="acceptCookies" class="btn btn-primary">Alle akzeptieren</button>
+        <button id="declineCookies" class="btn btn-secondary">Ablehnen</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

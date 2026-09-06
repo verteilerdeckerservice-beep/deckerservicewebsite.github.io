@@ -1,71 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Scanschmiede – Oldtimer & 3D-Ersatzteile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scanschmiede | DECKER-SERVICE DIENSTLEISTUNGEN</title>
+  <meta name="description" content="Individuelle Oldtimer- und Kunststoffersatzteile im 3D-Druck sowie Oldtimer-Zubehör – nach Maß, Modell und Material gefertigt bzw. geliefert." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 </head>
-
 <body>
-<header class="site-header">
-  <div class="logo">
-    <img src="assets/img/logo-scanschmiede.svg" alt="Scanschmiede Logo">
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <a href="index.html" class="logo-link">
+          <span class="logo-crop">
+            <img src="assets/img/logo-primary.png" alt="DECKER-SERVICE DIENSTLEISTUNGEN Logo" class="logo" />
+          </span>
+        </a>
+      </div>
+      <button class="menu-toggle" aria-label="Menü öffnen/schließen"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Start</a>
+        <a href="about.html">Über uns</a>
+        <a href="scanschmiede.html" class="active">Scanschmiede</a>
+        <a href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-compact">
+    <div class="container">
+      <span class="eyebrow">Scanschmiede</span>
+      <h1>Oldtimer- &amp; Kunststoffersatzteile aus dem 3D-Drucker</h1>
+      <p>Individuelle Fertigung nach Maß, Modell und Material – wir liefern auch Oldtimer-Zubehör.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>Ersatzteil-Anfrage</h2>
+      <p class="section-intro">Diese Anfrage ist unverbindlich – die Fertigung beginnt erst nach Ihrer Bestätigung des Angebots.</p>
+
+      <div class="form-card">
+        <form action="send_scanschmiede.php" method="post" class="contact-form">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>E-Mail
+            <input type="email" name="email" required>
+          </label>
+          <label>Fahrzeugtyp / Modell
+            <input type="text" name="vehicle" required>
+          </label>
+          <label>Teilenummer / Beschreibung
+            <input type="text" name="part_description" required>
+          </label>
+          <label>Material / Ausführung
+            <input type="text" name="material" placeholder="z. B. PLA, ABS, PETG">
+          </label>
+          <label>Nachricht
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn primary">Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <strong>Kontakt:</strong>
+          Tel.: <a href="tel:+491749025136">0174 9025136</a><br />
+          E-Mail: <a href="mailto:support@deckerservice.de">support@deckerservice.de</a><br />
+          Betriebszeiten: Mo–Fr 16:30–18:00, Sa 7:30–16:00
+        </div>
+        <div class="footer-logo">
+          <img src="assets/img/logo-secondary.png" alt="DSD Logo" onerror="this.src='assets/img/logo-secondary.svg';" />
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-links">
+          <a href="impressum-holding.html">Impressum Holding</a> ·
+          <a href="impressum-vv.html">Impressum VV UG</a> ·
+          <a href="agb-vv.html">AGB VV UG</a> ·
+          <a href="impressum-scanschmiede.html">Impressum Scanschmiede</a> ·
+          <a href="agb-scanschmiede.html">AGB Scanschmiede</a> ·
+          <a href="widerruf.html">Widerruf</a> ·
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+        <p>&copy; <span id="year"></span> DECKER-SERVICE DIENSTLEISTUNGEN</p>
+        <div class="visitor-counter"><span>Besucher:</span> <span class="counter-number" id="visitorCount">0</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookieBanner" class="cookie-banner" style="display:none;">
+    <div class="cookie-banner-content">
+      <h3>Cookie-Einstellungen</h3>
+      <p>Wir verwenden nur technisch notwendige Cookies (Ihre Cookie-Einwilligung sowie ein einfacher Besucherzähler). Details in unserer <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+      <div class="cookie-banner-buttons">
+        <button id="acceptCookies" class="btn btn-primary">Alle akzeptieren</button>
+        <button id="declineCookies" class="btn btn-secondary">Ablehnen</button>
+      </div>
+    </div>
   </div>
-  <nav class="main-nav">
-    <a href="index.html">Startseite</a>
-    <a href="vv.html">VV UG</a>
-    <a href="scanschmiede.html" class="active">Scanschmiede</a>
-    <a href="kontakt.html">Kontakt</a>
-  </nav>
-</header>
 
-<main class="content">
-  <h1>Scanschmiede – Oldtimer & Kunststoffersatzteile</h1>
-  <p>3D-Druck für Oldtimerteile und Kunststoffkomponenten.</p>
-
-  <section>
-    <h2>Team</h2>
-    <ul>
-      <li>Marvin Henrich – Produktion, Lager</li>
-      <li>Maximilian Decker – Rekrutierung, Außendienst</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Ersatzteil-Anfrage</h2>
-    <form action="send_scanschmiede.php" method="post" class="contact-form">
-      <label>Name
-        <input type="text" name="name" required>
-      </label>
-      <label>E-Mail
-        <input type="email" name="email" required>
-      </label>
-      <label>Fahrzeugtyp / Modell
-        <input type="text" name="vehicle" required>
-      </label>
-      <label>Teilenummer / Beschreibung
-        <input type="text" name="part_description" required>
-      </label>
-      <label>Material / Ausführung
-        <input type="text" name="material" required>
-      </label>
-      <label>Nachricht
-        <textarea name="message" rows="5" required></textarea>
-      </label>
-      <button type="submit">Absenden</button>
-    </form>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <p>&copy; 2026 Scanschmiede</p>
-  <p>
-    <a href="impressum-scanschmiede.html">Impressum</a> |
-    <a href="agb-scanschmiede.html">AGB</a> |
-    <a href="widerruf.html">Widerrufsbelehrung</a> |
-    <a href="datenschutz.html">Datenschutz</a>
-  </p>
-</footer>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decker-Service">
+  <defs>
+    <clipPath id="dsFaviconClip"><rect x="4" y="4" width="56" height="56" rx="14"/></clipPath>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#ffffff" stroke="#185c3b" stroke-width="3.5"/>
+  <g clip-path="url(#dsFaviconClip)">
+    <path d="M-4 47 Q20 35 34 45 Q48 55 70 41 L70 70 L-4 70 Z" fill="#2f8c58" opacity="0.55"/>
+    <path d="M-4 53 Q24 43 36 51 Q50 59 70 49 L70 70 L-4 70 Z" fill="#185c3b"/>
+    <path d="M30 34 L34 34 L33 48 L31 48 Z" fill="#185c3b"/>
+    <circle cx="32" cy="18" r="7" fill="#185c3b"/>
+    <circle cx="23" cy="24.5" r="8.5" fill="#185c3b"/>
+    <circle cx="41" cy="24.5" r="8.5" fill="#185c3b"/>
+    <circle cx="32" cy="27.5" r="9.5" fill="#185c3b"/>
+  </g>
+</svg>
