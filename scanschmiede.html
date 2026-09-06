@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Scanschmiede – Oldtimer & 3D-Ersatzteile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="logo">
+    <img src="assets/img/logo-scanschmiede.svg" alt="Scanschmiede Logo">
+  </div>
+  <nav class="main-nav">
+    <a href="index.html">Startseite</a>
+    <a href="vv.html">VV UG</a>
+    <a href="scanschmiede.html" class="active">Scanschmiede</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="content">
+  <h1>Scanschmiede – Oldtimer & Kunststoffersatzteile</h1>
+  <p>3D-Druck für Oldtimerteile und Kunststoffkomponenten.</p>
+
+  <section>
+    <h2>Team</h2>
+    <ul>
+      <li>Marvin Henrich – Produktion, Lager</li>
+      <li>Maximilian Decker – Rekrutierung, Außendienst</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ersatzteil-Anfrage</h2>
+    <form action="send_scanschmiede.php" method="post" class="contact-form">
+      <label>Name
+        <input type="text" name="name" required>
+      </label>
+      <label>E-Mail
+        <input type="email" name="email" required>
+      </label>
+      <label>Fahrzeugtyp / Modell
+        <input type="text" name="vehicle" required>
+      </label>
+      <label>Teilenummer / Beschreibung
+        <input type="text" name="part_description" required>
+      </label>
+      <label>Material / Ausführung
+        <input type="text" name="material" required>
+      </label>
+      <label>Nachricht
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <button type="submit">Absenden</button>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Scanschmiede</p>
+  <p>
+    <a href="impressum-scanschmiede.html">Impressum</a> |
+    <a href="agb-scanschmiede.html">AGB</a> |
+    <a href="widerruf.html">Widerrufsbelehrung</a> |
+    <a href="datenschutz.html">Datenschutz</a>
+  </p>
+</footer>
+</body>
+</html>

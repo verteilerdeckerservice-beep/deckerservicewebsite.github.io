@@ -1,0 +1,27 @@
+<svg width="260" height="260" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hintergrund -->
+  <rect width="260" height="260" fill="#1b1f23"/>
+
+  <!-- Zahnrad (Oldtimer/Mechanik) -->
+  <g transform="translate(130,130)">
+    <circle r="70" fill="none" stroke="#00d1ff" stroke-width="8"/>
+    <g stroke="#00d1ff" stroke-width="8">
+      <line x1="0" y1="-90" x2="0" y2="-70"/>
+      <line x1="0" y1="90" x2="0" y2="70"/>
+      <line x1="90" y1="0" x2="70" y2="0"/>
+      <line x1="-90" y1="0" x2="-70" y2="0"/>
+      <line x1="64" y1="-64" x2="50" y2="-50"/>
+      <line x1="-64" y1="64" x2="-50" y2="50"/>
+      <line x1="64" y1="64" x2="50" y2="50"/>
+      <line x1="-64" y1="-64" x2="-50" y2="-50"/>
+    </g>
+  </g>
+
+  <!-- 3D-Druck Nozzle -->
+  <polygon points="130,40 150,100 110,100" fill="#00d1ff"/>
+
+  <!-- Text -->
+  <text x="50%" y="210" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle">
+    Scanschmiede
+  </text>
+</svg>
